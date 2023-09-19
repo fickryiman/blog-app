@@ -58,18 +58,30 @@ I will practice my knowledge about basic Ruby on Rails concepts - starting from 
 ### Projects list
 I will be building the Blog app for three weeks. Here is the list of projects that will guide me through the steps described above. Please find details about each of the milestone requirements in the upcoming project activities.
 
-- [Project 1: Creating a data model.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/projects/creating_data_model_project_v1_2.md)
-- [Project 2: Validations and Model specs.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/projects/Processing_data_model_project_v1_1.md)
-- [Project 3: Processing data in models.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/blog_app_validations_model_spec.md)
-- [Project 4: Controllers.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/projects/Setup_Controllers_project_v1_1.md)
-- [Project 5: Controllers specs.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/projects/controller_specs_project.md)
-- [Project 6: Views.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/projects/Views_project.md)
-- [Project 7: Forms.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/projects/forms_project_v1_1.md)
-- [Project 8: Integration specs for Views and fixing n+1 problems.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/projects/intergration_spec_and_n_1_project.md)
-- [Project 9: Add Devise.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/blog_app_devise.md)
-- [Project 10: Add authorization rules.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/blog_app_add_authorization.md)
-- [Project 11: Add API endpoints.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/blog_app_api_endpoints.md)
-- [Exercise: API documentation.](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/blog_app_api_documentation.md)
+- Project 1: Creating a data model.
+  - Create a new rails app. (rails new app-name --database=postgresql)
+  - Build project schema.
+      - Create and run the necessary migration files.
+      - Table and column names should match the ERD diagram.
+          - note: photo for users table should be a link to an image
+      - Foreign keys should be included.
+          - Pay attention that in `posts` table the column holding the foreign key to the `users` table should be named `author_id`
+      - All columns that are foreign keys should have a corresponding index.
+  - Be sure to reference the from the ERD.
+     <p align="center">
+        <img src="./public/blog_app_erd_v1_1.png" alt="Data model"  width="500px"  />
+     </p>
+- Project 2: Validations and Model specs.
+- Project 3: Processing data in models.
+- Project 4: Controllers.
+- Project 5: Controllers specs.
+- Project 6: Views.
+- Project 7: Forms.
+- Project 8: Integration specs for Views and fixing n+1 problems.
+- Project 9: Add Devise.
+- Project 10: Add authorization rules.
+- Project 11: Add API endpoints.
+- Exercise: API documentation.
 
 ## 🛠 Built With <a name="built-with"></a>
 
