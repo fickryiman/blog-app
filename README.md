@@ -60,17 +60,20 @@ I will be building the Blog app for three weeks. Here is the list of projects th
 
 - Project 1: Creating a data model.
   - Create a new rails app. (rails new app-name --database=postgresql)
+  - add database credentials at config\database.yml
+  - run rails db:create
   - Build project schema.
-      - Create and run the necessary migration files.
-      - Table and column names should match the ERD diagram.
-          - note: photo for users table should be a link to an image
-      - Foreign keys should be included.
-          - Pay attention that in `posts` table the column holding the foreign key to the `users` table should be named `author_id`
-      - All columns that are foreign keys should have a corresponding index.
+    - Create and run the necessary migration files.
+    - Table and column names should match the ERD diagram.
+      - note: photo for users table should be a link to an image
+    - Foreign keys should be included.
+      - Pay attention that in `posts` table the column holding the foreign key to the `users` table should be named `author_id`
+    - All columns that are foreign keys should have a corresponding index.
   - Be sure to reference the from the ERD.
-     <p align="center">
-        <img src="./public/blog_app_erd_v1_1.png" alt="Data model"  width="500px"  />
-     </p>
+    <p align="center">
+      <img src="./public/blog_app_erd_v1_1.png" alt="Data model" width="500px" />
+    </p>
+    
 - Project 2: Validations and Model specs.
 - Project 3: Processing data in models.
 - Project 4: Controllers.
