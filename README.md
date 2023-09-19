@@ -1,6 +1,3 @@
-
-<h1>blog-app</h1>
-
 <!-- TABLE OF CONTENTS -->
 # 📗 Table of Contents
 
@@ -73,7 +70,7 @@ I will be building the Blog app for three weeks. Here is the list of projects th
     <p align="center">
       <img src="./public/blog_app_erd_v1_1.png" alt="Data model" width="500px" />
     </p>
-    
+
 - Project 2: Validations and Model specs.
 - Project 3: Processing data in models.
 - Project 4: Controllers.
@@ -152,9 +149,9 @@ I will be building the Blog app for three weeks. Here is the list of projects th
 
 ### Key Features <a name="key-features"></a>
 
-- display a list of games 
-- display a air quality and weather informations based on selected game
-- single page apps (SPA)
+- implement authentication
+- implement authorization
+- create an API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -175,19 +172,22 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
-- git version 2.38.x
-- node.js version > 12.x
+- Operating System (Windows, Linux, Unix)
+- Ruby installed
+- Rails Gem installed
+- PostgreSQL installed
+- git version >= 2.38.x
 - IDE (visual studio code, etc)
 - browser (chrome, firefox, edge, safari)
 - install the dependencies
-
+  
 ### Setup
 
 Clone this repository to your desired folder:
 
 ```sh
-  cd free-pc-games-rep
-  git git@github.com:fickryiman/Free-PC-Games-Rep.git
+  cd blog-app
+  git git@github.com:fickryiman/blog-app.git
 ```
 
 
@@ -196,8 +196,8 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd free-pc-games-rep
-  npm install
+  cd blog-app
+  bundle install
 ```
 
 ### Usage
@@ -205,8 +205,8 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
-  npm run build (production environment)
-  npm start (development environment)
+  rails server
+  rails s
 ```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -236,7 +236,7 @@ You can deploy this project using:
 GitHub Pages
 Example:
 ```sh
-git@github.com:fickryiman/Free-PC-Games-Rep.git
+  git@github.com:fickryiman/blog-app.git
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -259,8 +259,6 @@ git@github.com:fickryiman/Free-PC-Games-Rep.git
 
 <!-- > Describe 1 - 3 features you will add to the project. -->
 - add login to user with social media auth or google auth
-- add games library for each user
-- add likes, dislike counters
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -269,7 +267,7 @@ git@github.com:fickryiman/Free-PC-Games-Rep.git
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [https://github.com/fickryiman/Free-PC-Games-Rep/issues](../../issues/).
+Feel free to check the [https://github.com/fickryiman/blog-app/issues](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -290,9 +288,6 @@ Credits and Thanks to:
 - Allah for the everythings, Alhamdulillah.
 - My Families for all of the supports.
 - Microverse for all of the experiences, lessons, projects.
-- ![Nelson Sakwa](https://www.behance.net/sakwadesignstudio/) for the website template design that inspired.
-- ![FreeToGame](https://www.freetogame.com/) for the games data and other important informations.
-- ![Flaticon](https://www.flaticon.com/) for the icons.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
