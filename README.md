@@ -60,12 +60,19 @@ I will be building the Blog app for three weeks. Here is the list of projects th
   - add database credentials at config\database.yml
   - run rails db:create
   - Build project schema.
-    - Create and run the necessary migration files.
+    - Create the necessary migration files.
+      - `rails generate migration CreateUsers name:string photo:string bio:text posts_counter:integer`
+      - `rails generate migration CreatePosts title:string text:text comments_counter:integer likes_counter:integer`
+      - `rails generate migration CreateComments text:text`
+      - `rails generate migration CreateLikes`
+    - Run the necessary migration files.
+      - `rails db:migrate`
     - Table and column names should match the ERD diagram.
       - note: photo for users table should be a link to an image
     - Foreign keys should be included.
       - Pay attention that in `posts` table the column holding the foreign key to the `users` table should be named `author_id`
     - All columns that are foreign keys should have a corresponding index.
+      - ``
   - Be sure to reference the from the ERD.
     <p align="center">
       <img src="./public/blog_app_erd_v1_1.png" alt="Data model" width="500px" />
