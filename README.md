@@ -311,7 +311,7 @@ Credits and Thanks to:
 <!-- LICENSE -->
 ## 📝 License <a name="license"></a>
 
-This project is [Creative Commons 1.0 Universal License](./LICENSE) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <!-- Creative Commons License - Start -->
 <!-- Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
