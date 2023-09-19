@@ -1,12 +1,17 @@
 class CreateComments < ActiveRecord::Migration[7.0]
   def change
     create_table :comments do |t|
-      t.references :author, foreign_key: { to_table: :users }
-      t.references :post, foreign_key: { to_table: :posts }
+      t.integer :author_id
+      t.integer :post_id
       t.text :text
 
       t.timestamps
     end
+
+    # add foreign key to, comments table, from users table, column name author_id
+    add_foreign_key :comments, :users, column: :author_id
+    # add foreign key to, comments table, from posts table, column name post_id
+    add_foreign_key :comments, :posts, column: :post_id
 
     # indexing foreign_key column "author_id"
     unless index_exists?(:comments, :author_id)
