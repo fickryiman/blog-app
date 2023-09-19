@@ -58,7 +58,7 @@ I will be building the Blog app for three weeks. Here is the list of projects th
 - Project 1: Creating a data model.
   - Create a new rails app. (rails new app-name --database=postgresql)
   - add database credentials at config\database.yml
-  - run rails db:create
+  - run `rails db:create`
   - Build project schema.
     - Create the necessary migration files.
       - `rails generate migration CreateUsers name:string photo:string bio:text posts_counter:integer`
@@ -72,7 +72,6 @@ I will be building the Blog app for three weeks. Here is the list of projects th
     - Foreign keys should be included.
       - Pay attention that in `posts` table the column holding the foreign key to the `users` table should be named `author_id`
     - All columns that are foreign keys should have a corresponding index.
-      - ``
   - Be sure to reference the from the ERD.
     <p align="center">
       <img src="./public/blog_app_erd_v1_1.png" alt="Data model" width="500px" />
@@ -180,7 +179,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 - Operating System (Windows, Linux, Unix)
-- Ruby installed
+- Ruby version >= 7.0.0 installed
 - Rails Gem installed
 - PostgreSQL installed
 - git version >= 2.38.x
