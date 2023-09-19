@@ -121,11 +121,11 @@ I will be building the Blog app for three weeks. Here is the list of projects th
   <details>
     <summary>Code Convention, Code Analysis</summary>
       <ul>
-        <li><a href="https://eslint.org/">ESLint</a></li>
+        <li><a href="https://docs.rubocop.org/en/stable/">Rubocop</a></li>
+        <li><a href="https://rubystyle.guide/">Ruby style guide</a></li>
         <li><a href="https://webhint.io/">Webhint</a></li>
         <li><a href="https://stylelint.io/">Stylelint</a></li>
         <li><a href="https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=en">Lighthouse</a></li>
-        <li><a href="https://www.npmjs.com/package/npm-check">node_modules checker</a></li>
       </ul>
   </details>
   <details>
@@ -220,14 +220,13 @@ You may also see any lint errors in the console.
 To run tests, run the following command:
 Run Github Actions Test
 ```sh
-  npm test
+  rubocop
 
   npx stylelint "**/*.{css,scss}"
-  npx eslint "**/*.{js,jsx}"
 
-  auto fix linter with --fix
+  auto fix linter with --fix or -A 
+  rubocop -A
   npx stylelint "**/*.{css,scss}" --fix
-  npx eslint "**/*.{js,jsx}" --fix
 ```
 
 ### Deployment
