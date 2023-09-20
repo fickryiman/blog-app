@@ -1,15 +1,20 @@
 class CreateLikes < ActiveRecord::Migration[7.0]
   def change
     create_table :likes do |t|
-      t.references :user, foreign_key: { to_table: :users }
-      t.references :post, foreign_key: { to_table: :posts }
+      t.integer :author_id
+      t.integer :post_id
 
       t.timestamps
     end
 
+    # add foreign key to, likes table, from users table, column name author_id
+    add_foreign_key :likes, :users, column: :author_id
+    # add foreign key to, likes table, from posts table, column name post_id
+    add_foreign_key :likes, :posts, column: :post_id
+
     # indexing foreign_key column "user_id"
-    unless index_exists?(:likes, :user_id)
-      add_index :likes, :user_id
+    unless index_exists?(:likes, :author_id)
+      add_index :likes, :author_id
     end
 
     # indexing foreign_key column "post_id"
