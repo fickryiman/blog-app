@@ -179,7 +179,7 @@ I will be building the Blog app for three weeks. Here is the list of projects th
 ## 🚀 Live Demo <a name=""></a>
 
 <!-- > Add a link to your deployed project. -->
-- Click the following url for [... Live Demo ...]()
+- Click the following url for [... No Live Demo yet! ...]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

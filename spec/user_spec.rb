@@ -20,4 +20,17 @@ RSpec.describe User, type: :model do
     user = User.new(name: 'user-1', posts_counter: -1)
     expect(user).to_not be_valid
   end
+
+  describe '#recent_posts' do
+    let(:user) { User.create }
+    let!(:post1) { user.posts.create(created_at: 3.days.ago) }
+    let!(:post2) { user.posts.create(created_at: 2.days.ago) }
+    let!(:post3) { user.posts.create(created_at: 1.day.ago) }
+    let!(:post4) { user.posts.create(created_at: 4.days.ago) } # This post should not be included in the result
+
+    it 'returns the three most recent posts' do
+      expect(user.recent_posts).to eq([post3, post2, post1])
+    end
+  end
 end
+
