@@ -33,4 +33,21 @@ class PostTest < ActiveSupport::TestCase
     post = Post.new(author: user, title: 'Test', comments_counter: 0, likes_counter: -1)
     assert_not post.valid?
   end
+
+  test 'recent_comments returns the most recent comments' do
+    user = create(:user)
+    post = create(:post, author: user)
+    create_list(:comment, 5, post:)
+    assert_equal 5, post.recent_comments.count
+  end
+
+  test 'update_posts_counter updates the posts counter of the author' do
+    user = create(:user)
+    assert_equal 0, user.posts_counter
+
+    create_list(:post, 5, author: user)
+    user.reload
+
+    assert_equal 5, user.posts_counter
+  end
 end
