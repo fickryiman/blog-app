@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Like, :type => :model do
+RSpec.describe Like, type: :model do
   it 'is not valid without an author_id' do
     like = Like.new(post_id: 1)
     expect(like).to_not be_valid

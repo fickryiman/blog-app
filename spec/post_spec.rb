@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Post, :type => :model do
+RSpec.describe Post, type: :model do
   it 'is valid with valid attributes' do
     author = User.create(name: 'author-1')
     post = Post.new(title: 'post-1', text: 'post text', author:, comments_counter: 0, likes_counter: 0)
