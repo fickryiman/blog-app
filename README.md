@@ -78,6 +78,20 @@ I will be building the Blog app for three weeks. Here is the list of projects th
     </p>
 
 - Project 2: Validations and Model specs.
+  - Use validations for models.
+  - Write unit tests for models.
+
+  - Add the following validations:
+    - For the User model:
+      - Name must not be blank.
+      - PostsCounter must be an integer greater than or equal to zero.
+    - For the Post model:
+      - Title must not be blank.
+      - Title must not exceed 250 characters.
+      - CommentsCounter must be an integer greater than or equal to zero.
+      - LikesCounter must be an integer greater than or equal to zero.
+  - Add unit specs for all of models' methods and validations.
+
 - Project 3: Processing data in models.
 - Project 4: Controllers.
 - Project 5: Controllers specs.
@@ -224,6 +238,16 @@ You may also see any lint errors in the console.
 ### Run tests
 
 To run tests, run the following command:
+
+Run models validation test 
+```
+  rspec
+```
+
+Run models methods unit test
+```
+  rails test
+```
 Run Github Actions Test
 ```sh
   rubocop
