@@ -235,6 +235,15 @@ You may also see any lint errors in the console.
 ### Run tests
 
 To run tests, run the following command:
+Run rspec
+```
+  rspec
+```
+
+Run test
+```
+  rails test
+```
 Run Github Actions Test
 ```sh
   rubocop
