@@ -106,7 +106,6 @@ I will be building the Blog app for three weeks. Here is the list of projects th
   - Use params from browser requests in a safe way.
   - create all controllers and views, won't be processing any data yet, will add simple placeholders for the views with plain HTML.
   - NOT use rails generate scaffold command. The point of this project is to show how to set up controllers by ourself.
-  
   - the app handles the URLs used in the wireframes:
     <p align="center">
       <img src="./public/blog_root_users.png" alt="All users page wireframe"  width="200px"  />
@@ -114,15 +113,12 @@ I will be building the Blog app for three weeks. Here is the list of projects th
       <img src="./public/blog_user_all_posts.png" alt="All posts by a given user page wireframe"  width="200px"  />
       <img src="./public/blog_single_post.png" alt="Single post page wireframe"  width="200px"  />
     </p>
-
   - For each URL created:
     - A route.
     - An action in the correct controller.
     - A view file.
-
   -  View files should include only placeholders written in plain HTML, e.g:
     - Here is a list of posts for a given user
-
   - Make sure that the added code to handle **only** the 4 required URLs.
     ###### Ensure that when run the `rails routes` command in the console, we can see the following output:
     ![Single Post page wireframe](./public/routes.png)
