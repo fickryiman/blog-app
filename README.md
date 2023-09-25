@@ -77,30 +77,59 @@ I will be building the Blog app for three weeks. Here is the list of projects th
       <img src="./public/blog_app_erd_v1_1.png" alt="Data model" width="500px" />
     </p>
 
-- Project 2: Validations and Model specs.
-  - Use validations for models.
-  - Write unit tests for models.
+- Project 2: Processing data in models & Validations and Model specs
+  - Processing data in models
+    - User model
+      - a method that returns the 3 most recent posts for a given user.
+      - a method that updates the posts counter for a user.
+    - Post model
+      - a method which returns the 5 most recent comments for a given post.
+      - a method that updates the comments counter for a post.
+      - a method that updates the likes counter for a post.
+  - Validations and Model specs
+    - Use validations for models.
+    - Write unit tests for models.
+    - Add the following validations:
+      - For the User model:
+        - Name must not be blank.
+        - PostsCounter must be an integer greater than or equal to zero.
+      - For the Post model:
+        - Title must not be blank.
+        - Title must not exceed 250 characters.
+        - CommentsCounter must be an integer greater than or equal to zero.
+        - LikesCounter must be an integer greater than or equal to zero.
+    - Add unit specs for all of models' methods and validations.
 
-  - Add the following validations:
-    - For the User model:
-      - Name must not be blank.
-      - PostsCounter must be an integer greater than or equal to zero.
-    - For the Post model:
-      - Title must not be blank.
-      - Title must not exceed 250 characters.
-      - CommentsCounter must be an integer greater than or equal to zero.
-      - LikesCounter must be an integer greater than or equal to zero.
-  - Add unit specs for all of models' methods and validations.
+- Project 3: Controllers.
+  - Use controllers to handle requests and render empty views.
+  - Implements Rails naming conventions.
+  - Use params from browser requests in a safe way.
+  - create all controllers and views, won't be processing any data yet, will add simple placeholders for the views with plain HTML.
+  - NOT use rails generate scaffold command. The point of this project is to show how to set up controllers by ourself.
+  - the app handles the URLs used in the wireframes:
+    <p align="center">
+      <img src="./public/blog_root_users.png" alt="All users page wireframe"  width="200px"  />
+      <img src="./public/blog_user_page.png" alt="Single user page wireframe"  width="200px"  />
+      <img src="./public/blog_user_all_posts.png" alt="All posts by a given user page wireframe"  width="200px"  />
+      <img src="./public/blog_single_post.png" alt="Single post page wireframe"  width="200px"  />
+    </p>
+  - For each URL created:
+    - A route.
+    - An action in the correct controller.
+    - A view file.
+  -  View files should include only placeholders written in plain HTML, e.g:
+    - Here is a list of posts for a given user
+  - Make sure that the added code to handle **only** the 4 required URLs.
+    ###### Ensure that when run the `rails routes` command in the console, we can see the following output:
+    ![Single Post page wireframe](./public/routes.png)
 
-- Project 3: Processing data in models.
-- Project 4: Controllers.
-- Project 5: Controllers specs.
-- Project 6: Views.
-- Project 7: Forms.
-- Project 8: Integration specs for Views and fixing n+1 problems.
-- Project 9: Add Devise.
-- Project 10: Add authorization rules.
-- Project 11: Add API endpoints.
+- Project 4: Controllers specs.
+- Project 5: Views.
+- Project 6: Forms.
+- Project 7: Integration specs for Views and fixing n+1 problems.
+- Project 8: Add Devise.
+- Project 9: Add authorization rules.
+- Project 10: Add API endpoints.
 - Exercise: API documentation.
 
 ## 🛠 Built With <a name="built-with"></a>
