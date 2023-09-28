@@ -1,19 +1,22 @@
-<div>
+<div class="container">
   <%= render partial: "user", locals: { user: @user} %>
-  <div>
-    <span>Bio</span>
-    <span><%= @user.bio %></span>
+  <div class="user-card gap-0 flex-col items-start border-card-bio">
+    <span class="card-title">Bio</span>
+    <span class="user-bio"><%= @user.bio %></span>
   </div>
 
   <% if @recent_posts.any? %>
     <% @recent_posts.each do |recent_post| %>
-      <%= render partial: "posts/post_card", locals: { post: recent_post, comments: nil } %>
+      <%= render partial: "posts/post_card", locals: { post: recent_post, comments: nil, counter: @count } %>
+      <% @count = @count + 1 %>
     <% end %>
 
     <a
       href="<%= user_posts_path(user_id: @user.id) %>"
+      class="load-all-posts" 
+      style="width: fit-content;"
     >
-      Load all posts
+      See all posts
     </a>
   <% else %>
     <p>No posts found for this user</p>
