@@ -1,0 +1,10 @@
+<a class="user-card" href="<%= user_path(user) %>">
+  <img src="<%= user.photo %>">
+  <div>
+    <div>
+      <span><%= user.name %></span>
+      <span><%= user.bio %></span>
+    </div>
+    <span>Number of post: <%= user.posts_counter %></span>
+  </div>
+</a>
