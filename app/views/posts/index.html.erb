@@ -1,1 +1,7 @@
-<h1>Hello, This is 'posts' root views, will shows all posts list based on specific user id</h1>
+<div class="container">
+  <%= render partial: "users/user", locals: { user: @user }%>
+  <% @posts.each do |post| %>
+    <%= render partial: "post_card", locals: { post: post, comments: post.recent_comments, counter: @count } %>
+    <% @count = @count + 1 %>
+  <% end %>
+</div>
