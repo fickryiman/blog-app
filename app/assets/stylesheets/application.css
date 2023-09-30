@@ -158,6 +158,17 @@ h6 {
   width: 100%;
 }
 
+.add-new-post {
+  padding: 10px 20px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  box-shadow: 3px 5px 1px rgb(255, 215, 154);
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 189, 89);
+  background-color: rgb(51, 51, 51);
+}
+
 /* comments */
 .comment-container {
   background-color: #e7fffc;
