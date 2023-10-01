@@ -13,17 +13,17 @@
   </div>
 
   <div class="comment-container">
-      <%= form_with model: @comment, url: create_new_comment_path(user_id: @user.id, id: @post.id) ,class: "flex items-start gap-1" do |form| %>
-        <%= form.text_area :text, size: "70x5" %>
-        <%= form.submit "Add new comment" %>
-      <% end %>
-    </div>
+    <%= form_with model: @comment, url: user_post_comments_path(user_id: @user.id, post_id: @post.id), class: "flex items-start gap-1" do |form| %>
+      <%= form.text_area :text, placeholder: "Write a comment...", size: "70x5" %>
+      <%= form.submit "Add new comment" %>
+    <% end %>
+  </div>
 
-    <div class="comment-container">
-      <%= form_with model: @like, url: create_new_like_path(user_id: @user.id, id: @post.id) ,class: "flex items-start gap-1" do |form| %>
-        <%= form.submit "Add post likes", class: "w-full" %>
-      <% end %>
-    </div>
+  <div class="comment-container">
+    <%= form_with model: @like, url: user_post_likes_path(@post.author_id, @post), class: "flex items-start gap-1" do |form| %>
+      <%= form.submit "Add post likes", class: "w-full" %>
+    <% end %>
+  </div>
 
-  <%= render partial: "comment_card", locals: {comments: @post.comments} %>
+  <%= render partial: "templates/comment_card", locals: {comments: @post.comments} %>
 </div>

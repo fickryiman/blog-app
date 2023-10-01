@@ -1,29 +1,36 @@
 class PostsController < ApplicationController
+
+  def show
+    @post = Post.find(params[:id])
+
+    @user = current_user
+  end
+
+  def new
+    @user = current_user
+    @post = Post.new
+    respond_to do |format|
+      format.html { render :new }
+    end
+  end
+
+  def create
+    @post = Post.new(post_params)
+
+    @post.author = current_user
+
+    if @post.save
+      redirect_to user_posts_path(id: current_user.id)
+    else
+      flash.now[:alert] = "Can't create a new post"
+      render :new
+    end
+  end
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts
     @counter = 1
-  end
-
-  def show
-    @user = User.find(params[:user_id])
-    @post = Post.find(params[:id])
-    @comment = Comment.new
-  end
-
-  def new
-    @post = Post.new
-  end
-
-  def create
-    @post = current_user.posts.new(post_params)
-
-    if @post.save
-      redirect_to user_posts_path(current_user)
-    else
-      flash[:alert] = 'Something went wrong'
-      render 'new'
-    end
   end
 
   private
