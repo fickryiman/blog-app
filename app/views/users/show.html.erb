@@ -5,7 +5,7 @@
     <span class="card-title">Bio</span>
     <span class="user-bio"><%= @user.bio %></span>
   </div>
-
+  
   <% if @recent_posts.any? %>
     <% @recent_posts.each do |recent_post| %>
       <%= render partial: "templates/post_card", locals: { post: recent_post, comments: nil, counter: @counter } %>

@@ -4,11 +4,9 @@ class UsersController < ApplicationController
     @recent_posts = @user.recent_posts
     @counter = 1
   end
-  
+
   def index
     @users = User.all
     @user = current_user
   end
-
-  
 end

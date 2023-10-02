@@ -3,13 +3,7 @@
   <div class="user-card-info">
     <div class="flex-col">
       <span class="card-title"><%= user.name %></span>
-      <span class="user-totalpost">
-        <% if user.posts_counter.class == Integer %>
-          Number of post: <%= user.posts_counter %>
-        <% else %>
-          Number of post: 0
-        <% end %>
-      </span>
+      <span class="user-totalpost">Number of post: <%= user.posts_counter || 0 %></span>
     </div>
   </div>
 </a>
