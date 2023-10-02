@@ -1,7 +1,7 @@
 <div class="container">
-  <%= render partial: "users/user", locals: { user: @user }%>
+  <%= render "templates/users", user: @user %>
   <% @posts.each do |post| %>
-    <%= render partial: "post_card", locals: { post: post, comments: post.recent_comments, counter: @count } %>
-    <% @count = @count + 1 %>
+    <%= render "templates/post_card", post: post, comments: post.recent_comments, counter: @counter %>
+    <% @counter = @counter + 1 %>
   <% end %>
 </div>

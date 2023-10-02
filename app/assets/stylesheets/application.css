@@ -158,6 +158,16 @@ h6 {
   width: 100%;
 }
 
+.add-new-post {
+  padding: 10px 20px;
+  margin-top: 10px;
+  box-shadow: 3px 5px 1px rgb(255, 215, 154);
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 189, 89);
+  background-color: rgb(51, 51, 51);
+}
+
 /* comments */
 .comment-container {
   background-color: #e7fffc;
@@ -185,7 +195,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   max-width: 650px;
-  gap: 10px;
+  gap: 5px;
   width: 100%;
 }
 
@@ -267,4 +277,8 @@ h6 {
 
 .text-center {
   text-align: center;
+}
+
+.alert {
+  color: red;
 }
