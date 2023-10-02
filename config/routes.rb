@@ -24,5 +24,17 @@ Rails.application.routes.draw do
       resources :likes,  only: [:create] 
     end
   end
-
 end
+
+  # Prefix Verb   		        URI 		  Pattern                                                    Controller#Action
+  # ------------		        -------		  --------------------------------------------------				 ------------------------
+  # root 		                  GET    		/                                                          users#index
+  # user_post_comments 		    POST   		/users/:user_id/posts/:post_id/comments(.:format)          comments#create
+  # new_user_post_comment 		GET    		/users/:user_id/posts/:post_id/comments/new(.:format)      comments#new
+  # user_post_likes 		      POST   		/users/:user_id/posts/:post_id/likes(.:format)             likes#create
+  # user_posts 		            GET    		/users/:user_id/posts(.:format)                            posts#index
+  #                           POST   		/users/:user_id/posts(.:format)                            posts#create
+  # new_user_post 		        GET    		/users/:user_id/posts/new(.:format)                        posts#new
+  # user_post 		            GET    		/users/:user_id/posts/:id(.:format)                        posts#show
+  # users 		                GET    		/users(.:format)                                           users#index
+  # user 		                  GET    		/users/:id(.:format)                                       users#show
