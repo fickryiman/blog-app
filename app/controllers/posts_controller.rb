@@ -27,7 +27,7 @@ class PostsController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts
+    @posts = @user.posts.order(created_at: :desc)
     @counter = 1
   end
 
