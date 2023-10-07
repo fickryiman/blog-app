@@ -14,14 +14,13 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-
     @post.author = current_user
 
     if @post.save
       redirect_to user_posts_path(id: current_user.id)
     else
       flash.now[:alert] = "Can't create a new post"
-      render :new
+      render action: 'new'
     end
   end
 
